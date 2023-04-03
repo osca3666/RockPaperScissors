@@ -2,6 +2,8 @@ const button_r = document.querySelector('button.rock');
 const button_p = document.querySelector('button.paper');
 const button_s = document.querySelector('button.scizzor')
 
+button.style.borderWidth = "10px";
+
 button_r.onlick= playRound('ROCK', getComputerChoice());
 button_p.onlick= playRound('PAPER', getComputerChoice());
 button_s.onlick= playRound('SCIZZOR', getComputerChoice());
@@ -30,17 +32,20 @@ function playRound(playerChoice, computerChoice)
     {
         if (computerChoice == 1)
         {
-            console.log("Computer chose rock. thats a tie!");
+            div.textContent="Computer chose rock. thats a tie!";
+            // console.log("Computer chose rock. thats a tie!");
             return;
         }
         else if(computerChoice == 2)
         {
-            console.log("Computer chose paper. you lost. paper beats rock");
+            div.textContent="Computer chose paper. you lost. paper beats rock!";
+            //console.log("Computer chose paper. you lost. paper beats rock");
             return "lost";
         }
         else if (computerChoice == 3)
         {
-            console.log("Computer chose scizzor. you won. rock beats scizzors");
+            div.textContent="Computer chose scizzor. you won. rock beats scizzors!";
+            // console.log("Computer chose scizzor. you won. rock beats scizzors");
             return "win";
         }
     }
@@ -48,17 +53,20 @@ function playRound(playerChoice, computerChoice)
     {
         if (computerChoice == 1)
         {
-            console.log("Computer chose rock. you won. paper beats rock");
+            div.textContent="Computer chose rock. you won. paper beats rock";
+            // console.log("Computer chose rock. you won. paper beats rock");
             return "win";
         }
         else if(computerChoice == 2)
         {
-            console.log("Computer chose paper as well.tie.");
+            div.textContent="Computer chose paper as well.tie.";
+            // console.log("Computer chose paper as well.tie.");
             return;
         }
         else if (computerChoice == 3)
         {
-            console.log("Computer chose scizzors. you lost.");
+            div.textContent="Computer chose scizzors. you lost.";
+            // console.log("Computer chose scizzors. you lost.");
             return "lost";
         }
     }
@@ -66,23 +74,27 @@ function playRound(playerChoice, computerChoice)
     {
         if (computerChoice == 1)
         {
-            console.log("computer chose rock. you lsot");
+            div.textContent="computer chose rock. you lost";
+            // console.log("computer chose rock. you lsot");
             return "lost";
         }
         else if(computerChoice == 2)
         {
-            console.log("Computer chose paper, you WOnn");
+            div.textContent="Computer chose paper, you WOnn";
+            // console.log("Computer chose paper, you WOnn");
             return "win";
         }
         else if (computerChoice == 3)
         {
-            console.log("tie");
+            div.textContent="tie!";
+            // console.log("tie");
             return;
         }
     }
     else
     {
-        console.log("not the right choice")
+        div.textContent="not the right choice";
+        // console.log("not the right choice")
     }
 }
 
