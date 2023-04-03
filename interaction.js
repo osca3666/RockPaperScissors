@@ -2,7 +2,11 @@ const button_r = document.querySelector('button.rock');
 const button_p = document.querySelector('button.paper');
 const button_s = document.querySelector('button.scizzor')
 
-button.style.borderWidth = "10px";
+button.style.borderWidth = "100px";
+button_r.textContent="ROCK";
+button_p.textContent="ROCK";
+button_s.textContent="ROCK";
+
 
 button_r.onlick= playRound('ROCK', getComputerChoice());
 button_p.onlick= playRound('PAPER', getComputerChoice());
