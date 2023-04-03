@@ -1,3 +1,9 @@
+// const button_r = document.querySelector('button.rock');
+// const button_s = document.querySelector('button.scizzor')
+// const button_p = document.querySelector('button.paper');
+
+// const button = document.querySelector('button');
+
 function getRandomNumber(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -8,11 +14,6 @@ function getComputerChoice() {
     let diceRollResult = getRandomNumber(1,3);
     return diceRollResult;
 }
-
-// console.log(getComputerChoice());
-
-
-
 
 
 function playRound(playerChoice, computerChoice)
@@ -85,7 +86,7 @@ function game()
     let playerWins = 0;
     let computerWins = 0;
 
-    for(i = 0; i < 5; i++)
+    for(i = 0; i < 100; i++)
     {
         let playerChoice = prompt("rock,paper,or scizzor boiii?");
         playerChoice = playerChoice.toUpperCase();
