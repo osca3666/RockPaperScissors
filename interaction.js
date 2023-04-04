@@ -1,23 +1,33 @@
-const button_r = document.querySelector('button.rock');
-const button_p = document.querySelector('button.paper');
-const button_s = document.querySelector('button.scizzor')
+const button_r = document.createElement("button");
+const button_p = document.createElement("button");
+const button_s = document.createElement("button");
 
-button.style.borderWidth = "100px";
 button_r.textContent="ROCK";
-button_p.textContent="ROCK";
-button_s.textContent="ROCK";
+button_p.textContent="PAPER";
+button_s.textContent="SCIZZOR";
 
+button_r.onclick= function(){
+    playRound('ROCK',getComputerChoice());
+}
+button_p.onclick= function(){
+    playRound('PAPER',getComputerChoice());
+}
+button_s.onclick= function(){
+    playRound('SCIZZOR',getComputerChoice());
+}
 
-button_r.onlick= playRound('ROCK', getComputerChoice());
-button_p.onlick= playRound('PAPER', getComputerChoice());
-button_s.onlick= playRound('SCIZZOR', getComputerChoice());
+document.body.appendChild(button_r);
+document.body.appendChild(button_p);
+document.body.appendChild(button_s);
+
 
 const div = document.createElement('div');
-div.color = red;
-// body.appendChild(div);
-// div.borderStyle = 1px solid red;
+div.style.color = 'red';
+document.body.appendChild(div);
 
-const button = document.querySelector('button');
+const div_score = document.createElement('div');
+document.body.appendChild(div_score);
+
 
 function getRandomNumber(min, max){
     min = Math.ceil(min);
@@ -36,68 +46,68 @@ function playRound(playerChoice, computerChoice)
     {
         if (computerChoice == 1)
         {
-            div.textContent="Computer chose rock. thats a tie!";
+            div.textContent="You tie each other's shoelaces";
             // console.log("Computer chose rock. thats a tie!");
-            return;
+            // return;
         }
         else if(computerChoice == 2)
         {
-            div.textContent="Computer chose paper. you lost. paper beats rock!";
+            div.textContent="Computer chose paper. you fool- paper beats rock!";
             //console.log("Computer chose paper. you lost. paper beats rock");
-            return "lost";
+            // return "lost";
         }
         else if (computerChoice == 3)
         {
-            div.textContent="Computer chose scizzor. you won. rock beats scizzors!";
+            div.textContent="Boulder is always the right choice! You beat the rusty computer scizzor.";
             // console.log("Computer chose scizzor. you won. rock beats scizzors");
-            return "win";
+            // return "win";
         }
     }
     else if (playerChoice == "PAPER")
     {
         if (computerChoice == 1)
         {
-            div.textContent="Computer chose rock. you won. paper beats rock";
+            div.textContent="Computer chose rock. you won cause you're the best. paper beats rock";
             // console.log("Computer chose rock. you won. paper beats rock");
-            return "win";
+            // return "win";
         }
         else if(computerChoice == 2)
         {
-            div.textContent="Computer chose paper as well.tie.";
+            div.textContent="You and the computer bow deeply at one another out of respect";
             // console.log("Computer chose paper as well.tie.");
-            return;
+            // return;
         }
         else if (computerChoice == 3)
         {
-            div.textContent="Computer chose scizzors. you lost.";
+            div.textContent="Computer takes a pair of scizzors and your paper got shredded### RIP";
             // console.log("Computer chose scizzors. you lost.");
-            return "lost";
+            // return "lost";
         }
     }
     else if (playerChoice == "SCIZZOR")
     {
         if (computerChoice == 1)
         {
-            div.textContent="computer chose rock. you lost";
+            div.textContent="The computer's calcium deposit destroyed your puny scizzor";
             // console.log("computer chose rock. you lsot");
-            return "lost";
+            // return "lost";
         }
         else if(computerChoice == 2)
         {
-            div.textContent="Computer chose paper, you WOnn";
+            div.textContent="YOUR MIGHTY SCIZZOR RIPS APART THE COWARDLY COMPUTER PAPER";
             // console.log("Computer chose paper, you WOnn");
-            return "win";
+            // return "win";
         }
         else if (computerChoice == 3)
         {
-            div.textContent="tie!";
+            div.textContent="YOU AND THE COMPUTER ARE TIED... FOR LAST PLACE :<";
             // console.log("tie");
-            return;
+            // return;
         }
     }
     else
     {
-        div.textContent="not the right choice";
+        div.textContent="What is you doing.";
         // console.log("not the right choice")
     }
 }
@@ -128,4 +138,4 @@ function playRound(playerChoice, computerChoice)
 //     }
 // }
 
-game();
+// game();
