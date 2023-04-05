@@ -1,33 +1,27 @@
-
+document.body.style.color = "rgb(136, 176, 75)";
 
 //images of rps
 const img_r = document.createElement("img");
 img_r.src = "./images/rock.jpg";
 img_r.onload = function() {
-    img_r.style.width = "200px";
+    img_r.style.width = "250px";
     img_r.style.height = "auto";
     img_r.style.border = "2px solid red";
   };
 const img_p = document.createElement("img");
 img_p.src = "./images/paper.jpg";
 img_p.onload = function() {
-    img_p.style.width = "200px";
+    img_p.style.width = "250px";
     img_p.style.height = "auto";
-    img_r.style.border = "2px solid red";
+    img_p.style.border = "2px solid red";
   };
 const img_s = document.createElement("img");
 img_s.src = "./images/scissor.jpg";
 img_s.onload = function() {
-    img_s.style.width = "200px";
+    img_s.style.width = "250px";
     img_s.style.height = "auto";
     img_s.style.border = "2px solid red";
-
   };
-
-const all_img = document.querySelectorAll("img");
-
-
-//container for rps images
 
 img_r.onclick= function(){
     playRound('ROCK',getComputerChoice());
@@ -36,9 +30,10 @@ img_p.onclick= function(){
     playRound('PAPER',getComputerChoice());
 }
 img_s.onclick= function(){
-    playRound('SCIZZOR',getComputerChoice());
+    playRound('SCISSOR',getComputerChoice());
 }
 
+//images container
 const container = document.createElement("div");
 container.style.display = "flex";
 document.body.appendChild(container);
@@ -49,8 +44,9 @@ container.appendChild(img_s);
 
 
 const div = document.createElement('div');
-div.style.color = 'red';
-div.style.display = "flex";
+div.style.color = 'black';
+div.style.fontSize = "30px"
+div.style.justifyContent = "center";
 document.body.appendChild(div);
 
 const div_score = document.createElement('div');
@@ -86,7 +82,7 @@ function playRound(playerChoice, computerChoice)
         }
         else if (computerChoice == 3)
         {
-            div.textContent="Boulder is always the right choice! You beat the rusty computer scizzor.";
+            div.textContent="Boulder is always the right choice! You beat the rusty computer scissor.";
             // console.log("Computer chose scizzor. you won. rock beats scizzors");
             // return "win";
         }
@@ -107,22 +103,22 @@ function playRound(playerChoice, computerChoice)
         }
         else if (computerChoice == 3)
         {
-            div.textContent="Computer takes a pair of scizzors and your paper got shredded### RIP";
+            div.textContent="Computer takes a pair of scissors and your paper got shredded### RIP";
             // console.log("Computer chose scizzors. you lost.");
             // return "lost";
         }
     }
-    else if (playerChoice == "SCIZZOR")
+    else if (playerChoice == "SCISSOR")
     {
         if (computerChoice == 1)
         {
-            div.textContent="The computer's calcium deposit destroyed your puny scizzor";
+            div.textContent="The computer's calcium deposit destroyed your puny scissor";
             // console.log("computer chose rock. you lsot");
             // return "lost";
         }
         else if(computerChoice == 2)
         {
-            div.textContent="YOUR MIGHTY SCIZZOR RIPS APART THE COWARDLY COMPUTER PAPER";
+            div.textContent="YOUR MIGHTY SCISSOR RIPS APART THE COWARDLY COMPUTER PAPER";
             // console.log("Computer chose paper, you WOnn");
             // return "win";
         }
