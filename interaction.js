@@ -1,10 +1,27 @@
-const button_r = document.createElement("button");
-const button_p = document.createElement("button");
-const button_s = document.createElement("button");
+const img_r = document.createElement("img");
+img_r.src = "images/rock.jpg";
+const img_p = document.createElement("img");
+img_p.src = "images/paper.jpg";
+const img_s = document.createElement("img");
+img_s.src = "images/scissor.jpg";
+
+const button_r = document.createElement("div");
+button_r.classList.add('user_choices');
+button_r.style.display = "flex";
+const button_p = document.createElement("div");
+button_p.classList.add('user_choices');
+button_p.style.display = "flex";
+const button_s = document.createElement("div");
+button_s.style.display = "flex";
+
+button_s.classList.add('user_choices');
+
+
 
 button_r.textContent="ROCK";
 button_p.textContent="PAPER";
 button_s.textContent="SCIZZOR";
+
 
 button_r.onclick= function(){
     playRound('ROCK',getComputerChoice());
