@@ -1,3 +1,5 @@
+
+
 //images of rps
 const img_r = document.createElement("img");
 img_r.src = "images/rock.jpg";
@@ -8,18 +10,15 @@ img_s.src = "images/scissor.jpg";
 
 //container for rps images
 const button_r = document.createElement("div");
-button_r.classList.add('user_choices');
 button_r.appendChild(img_r);
-button_r.style.display = "flex";
 const button_p = document.createElement("div");
-button_p.classList.add('user_choices');
-button_r.appendChild(img_r);
-button_p.style.display = "flex";
+button_p.appendChild(img_p);
 const button_s = document.createElement("div");
-button_r.appendChild(img_r);
-button_s.style.display = "flex";
-button_s.classList.add('user_choices');
+button_s.appendChild(img_s);
 
+document.body.appendChild(button_r);
+document.body.appendChild(button_p);
+document.body.appendChild(button_s);
 
 
 button_r.textContent="ROCK";
