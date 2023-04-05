@@ -3,17 +3,25 @@
 //images of rps
 const img_r = document.createElement("img");
 img_r.src = "./images/rock.jpg";
-img_r.style.height = "200px";
+img_r.onload = function() {
+    img_r.style.height = "300px";
+    img_r.style.width = "300px";
+  };
 const img_p = document.createElement("img");
 img_p.src = "./images/paper.jpg";
+img_p.onload = function() {
+    img_r.style.height = "300px";
+    img_r.style.width = "300px";
+  };
 const img_s = document.createElement("img");
 img_s.src = "./images/scissor.jpg";
+img_s.onload = function() {
+    img_r.style.height = "300px";
+    img_r.style.width = "300px";
+  };
 
 const all_img = document.querySelectorAll("img");
-for (let i = 0; i < all_img.length; i++){
-    all_img[i].style.height = "300px";
-    all_img[i].style.width = "300px";
-}
+
 
 //container for rps images
 
