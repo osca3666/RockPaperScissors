@@ -6,14 +6,15 @@ img_r.src = "./images/rock.jpg";
 img_r.onload = function() {
     img_r.style.width = "250px";
     img_r.style.height = "auto";
-    img_r.style.border = "2px solid red";
+    img_r.style.padding = "9px";
   };
 const img_p = document.createElement("img");
 img_p.src = "./images/paper.jpg";
 img_p.onload = function() {
     img_p.style.width = "250px";
     img_p.style.height = "auto";
-    img_p.style.border = "2px solid red";
+    img_p.style.padding = "9px";
+
   };
 const img_s = document.createElement("img");
 img_s.src = "./images/scissor.jpg";
@@ -21,6 +22,7 @@ img_s.onload = function() {
     img_s.style.width = "250px";
     img_s.style.height = "auto";
     img_s.style.border = "2px solid red";
+    img_s.style.padding = "9px";
   };
 
 img_r.onclick= function(){
@@ -42,7 +44,8 @@ container.appendChild(img_r);
 container.appendChild(img_p);
 container.appendChild(img_s);
 
-
+const hr = document.createElement("hr");
+document.body.appendChild("hr");
 
 const div = document.createElement('div');
 div.style.color = 'black';
@@ -51,7 +54,10 @@ div.style.textAlign = "center";
 document.body.appendChild(div);
 
 const div_score = document.createElement('div');
+div_score.textAlign = "center";
+div_score.textContent = ""
 document.body.appendChild(div_score);
+
 
 
 function getRandomNumber(min, max){
