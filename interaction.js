@@ -4,20 +4,20 @@
 const img_r = document.createElement("img");
 img_r.src = "./images/rock.jpg";
 img_r.onload = function() {
-    img_r.style.height = "300px";
-    img_r.style.width = "300px";
+    img_r.style.height = "200px";
+    img_r.style.width = "auto";
   };
 const img_p = document.createElement("img");
 img_p.src = "./images/paper.jpg";
 img_p.onload = function() {
-    img_r.style.height = "300px";
-    img_r.style.width = "300px";
+    img_r.style.height = "200px";
+    img_r.style.width = "auto";
   };
 const img_s = document.createElement("img");
 img_s.src = "./images/scissor.jpg";
 img_s.onload = function() {
-    img_r.style.height = "300px";
-    img_r.style.width = "300px";
+    img_r.style.height = "200px";
+    img_r.style.width = "auto";
   };
 
 const all_img = document.querySelectorAll("img");
