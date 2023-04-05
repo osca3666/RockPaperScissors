@@ -3,11 +3,15 @@
 //images of rps
 const img_r = document.createElement("img");
 img_r.src = "./images/rock.jpg";
+img_r.style.height = "200px";
 const img_p = document.createElement("img");
 img_p.src = "./images/paper.jpg";
 const img_s = document.createElement("img");
 img_s.src = "./images/scissor.jpg";
 
+const all_img = document.querySelectorAll("img");
+all_img.style.height = "300px";
+all_img.style.widht = "300px";
 //container for rps images
 
 img_r.onclick= function(){
@@ -21,6 +25,7 @@ img_s.onclick= function(){
 }
 
 const container = document.createElement("div");
+container.style.display = "flex";
 document.body.appendChild(container);
 container.appendChild(img_r);
 container.appendChild(img_p);
