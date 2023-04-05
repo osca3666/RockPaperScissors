@@ -2,11 +2,11 @@
 
 //images of rps
 const img_r = document.createElement("img");
-img_r.src = "images/rock.jpg";
+img_r.src = "./images/rock.jpg";
 const img_p = document.createElement("img");
-img_p.src = "images/paper.jpg";
+img_p.src = "./images/paper.jpg";
 const img_s = document.createElement("img");
-img_s.src = "images/scissor.jpg";
+img_s.src = "./images/scissor.jpg";
 
 //container for rps images
 const button_r = document.createElement("div");
@@ -16,9 +16,6 @@ button_p.appendChild(img_p);
 const button_s = document.createElement("div");
 button_s.appendChild(img_s);
 
-document.body.appendChild(button_r);
-document.body.appendChild(button_p);
-document.body.appendChild(button_s);
 
 
 button_r.textContent="ROCK";
@@ -39,6 +36,7 @@ button_s.onclick= function(){
 document.body.appendChild(button_r);
 document.body.appendChild(button_p);
 document.body.appendChild(button_s);
+
 
 
 const div = document.createElement('div');
