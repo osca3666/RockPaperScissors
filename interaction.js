@@ -9,33 +9,22 @@ const img_s = document.createElement("img");
 img_s.src = "./images/scissor.jpg";
 
 //container for rps images
-const button_r = document.createElement("div");
-button_r.appendChild(img_r);
-const button_p = document.createElement("div");
-button_p.appendChild(img_p);
-const button_s = document.createElement("div");
-button_s.appendChild(img_s);
 
-
-
-button_r.textContent="ROCK";
-button_p.textContent="PAPER";
-button_s.textContent="SCIZZOR";
-
-
-button_r.onclick= function(){
+img_r.onclick= function(){
     playRound('ROCK',getComputerChoice());
 }
-button_p.onclick= function(){
+img_p.onclick= function(){
     playRound('PAPER',getComputerChoice());
 }
-button_s.onclick= function(){
+img_s.onclick= function(){
     playRound('SCIZZOR',getComputerChoice());
 }
 
-document.body.appendChild(button_r);
-document.body.appendChild(button_p);
-document.body.appendChild(button_s);
+const container = document.createElement("div");
+document.body.appendChild(container);
+container.appendChild(img_r);
+container.appendChild(img_p);
+container.appendChild(img_s);
 
 
 
