@@ -45,6 +45,8 @@ container.appendChild(img_p);
 container.appendChild(img_s);
 
 const hr = document.createElement("hr");
+hr.style.margin = "20px 0px";
+hr.style.height = "3px";
 document.body.appendChild("hr");
 
 const div = document.createElement('div');
