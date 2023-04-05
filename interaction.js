@@ -10,14 +10,14 @@ img_r.onload = function() {
 const img_p = document.createElement("img");
 img_p.src = "./images/paper.jpg";
 img_p.onload = function() {
-    img_r.style.height = "200px";
-    img_r.style.width = "auto";
+    img_p.style.height = "200px";
+    img_p.style.width = "auto";
   };
 const img_s = document.createElement("img");
 img_s.src = "./images/scissor.jpg";
 img_s.onload = function() {
-    img_r.style.height = "200px";
-    img_r.style.width = "auto";
+    img_s.style.height = "200px";
+    img_s.style.width = "auto";
   };
 
 const all_img = document.querySelectorAll("img");
