@@ -10,8 +10,11 @@ const img_s = document.createElement("img");
 img_s.src = "./images/scissor.jpg";
 
 const all_img = document.querySelectorAll("img");
-all_img.style.height = "300px";
-all_img.style.widht = "300px";
+for (let i = 0; i < all_img.length; i++){
+    all_img[i].style.height = "300px";
+    all_img[i].style.width = "300px";
+}
+
 //container for rps images
 
 img_r.onclick= function(){
@@ -35,6 +38,7 @@ container.appendChild(img_s);
 
 const div = document.createElement('div');
 div.style.color = 'red';
+div.style.display = "flex";
 document.body.appendChild(div);
 
 const div_score = document.createElement('div');
