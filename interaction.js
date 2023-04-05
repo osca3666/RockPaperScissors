@@ -36,6 +36,7 @@ img_s.onclick= function(){
 //images container
 const container = document.createElement("div");
 container.style.display = "flex";
+container.style.justifyContent = "center";
 document.body.appendChild(container);
 container.appendChild(img_r);
 container.appendChild(img_p);
@@ -46,7 +47,7 @@ container.appendChild(img_s);
 const div = document.createElement('div');
 div.style.color = 'black';
 div.style.fontSize = "30px"
-div.style.justifyContent = "center";
+div.style.textAlign = "center";
 document.body.appendChild(div);
 
 const div_score = document.createElement('div');
