@@ -74,10 +74,10 @@ function endGameMessage(message){
 
 //game_end display
 function gameEnd () {
-    if (user_win == 5){
+    if (user_win == 3){
         endGameMessage("You won. YESSS YOUR SO COOL GYADUMMMM");
     }   
-    else if (comp_win == 5){
+    else if (comp_win == 3){
         endGameMessage("Computer won. SMH GO DO YOUR HOMEWORKKKKKKKKKK");
     }
 }
@@ -118,11 +118,10 @@ div.style.display = 'flex';
 div.style.color = 'black';
 div.style.fontSize = "30px"
 div.style.height = "50px";
-div.style.border = "2px solid blue";
-div.style.borderRadius = "10%";
+div.style.border = "2px solid black";
 div.style.alignItems = "center";
 div.style.justifyContent = "center";
-div.textContent = 'Enter the Dojo. First to 5 wins!'
+div.textContent = 'Enter the Dojo. First to 3 wins!'
 document.body.appendChild(div);
 
 
