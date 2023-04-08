@@ -55,8 +55,9 @@ div.style.textAlign = "center";
 document.body.appendChild(div);
 
 const div_score = document.createElement('div');
+div_score.classList.add("scoreboard");
+div_score.textContent
 div_score.textAlign = "center";
-div_score.textContent = ""
 document.body.appendChild(div_score);
 
 
