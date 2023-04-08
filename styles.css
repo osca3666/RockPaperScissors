@@ -1,4 +1,22 @@
-scoreboard {
-    color: red;
-    border-radius: 10%;
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgb(12, 65, 26);
+    border-radius: 12%;
+    height: 100px;
+    border-width: 5px;
+    border-style: double;
+    font-size: 30px;
+    margin: 10px;
+}
+
+html, body {
+    height: 100%;
+    margin: 3px;
+    padding: 3px;
+}
+
+.contain {
+    background-color: rgb(17, 158, 64);
 }
