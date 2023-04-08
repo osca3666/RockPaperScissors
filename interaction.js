@@ -21,7 +21,6 @@ img_s.src = "./images/scissor.jpg";
 img_s.onload = function() {
     img_s.style.width = "250px";
     img_s.style.height = "auto";
-    img_s.style.border = "2px solid red";
     img_s.style.padding = "9px";
   };
 
